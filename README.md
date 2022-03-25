@@ -47,3 +47,12 @@ Generates a README.md in the docs/ subdirectory.
 
 ```watch```
 Looks for updates to the protofiles and rebuilds the docs.
+
+## Buf.build Code Generation
+[Installation Instructions](https://docs.buf.build/installation)
+
+```brew install bufbuild/buf/buf```
+
+It appears it is only possible to target specific files with an [argument](https://docs.buf.build/generate/usage#limit-to-specific-files)
+
+```buf generate --path proto/com/iabtechlab/openrtb/v3/openrtb.proto```

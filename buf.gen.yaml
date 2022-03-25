@@ -1,0 +1,21 @@
+version: v1
+managed:
+  enabled: true
+  ## This avoids java/com/com being created
+  java_package_prefix: java
+  ## Not clear what this is not working as in Docs
+  ## https://docs.buf.build/generate/managed-mode#java_package_prefix
+  # java_outer_classname: OpenRtb
+  go_package_prefix:
+    default: github.com/sdenham/openrtb
+plugins:
+  - name: java
+    out: ./
+  - name: python
+    out: ./python
+  - name: go
+    out: ./go
+    opt:
+      - paths=source_relative
+  - name: cpp
+    out: ./cpp
